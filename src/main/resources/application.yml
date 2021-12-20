@@ -1,0 +1,14 @@
+spring:
+  mail:
+    host: smtp.poczta.onet.pl
+    port: 465
+    username: proba_spring_email@op.pl
+    password: abc123ABC
+    properties:
+      smtp:
+        auth: true
+        mail.ssl.enable: true
+
+logging:
+  level:
+    email.plemail: DEBUG
