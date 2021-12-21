@@ -16,7 +16,7 @@ public class MailService {
     }
 
     public void sendEmail(Email email) {
-        send(Application.COMPANY_EMAIL, email.getSender(), email.getSubject(), email.getMessage());
+        send(Application.COMPANY_EMAIL, email.getSender(),  email.getSubject(), email.getMessage());
     }
 
     public void sendNotification(String sender) {
@@ -25,14 +25,15 @@ public class MailService {
                         "możliwie najkrótszym czasie");
     }
 
-    public void send(String receiver, String sender, String title, String message) {
-        logger.debug("Wysyłam maila do {}", receiver);
+    public void send(String to, String replyTo, String title, String message) {
+        logger.debug("Wysyłam maila do {}", to);
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-        simpleMailMessage.setFrom(sender);
-        simpleMailMessage.setTo(receiver);
+        simpleMailMessage.setFrom(Application.COMPANY_EMAIL);
+        simpleMailMessage.setTo(to);
+        simpleMailMessage.setReplyTo(replyTo);
         simpleMailMessage.setSubject(title);
         simpleMailMessage.setText(message);
         javaMailSender.send(simpleMailMessage);
-        logger.debug("Mail do {} został wysłany", receiver);
+        logger.debug("Mail do {} został wysłany", to);
     }
 }

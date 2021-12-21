@@ -10,13 +10,9 @@
 </head>
 <body>
     <div class="container">
-        <div clas="header" th:replace="fragments :: header"></div>
-        <div class="wrapper">
-            <div class="content" layout:fragment="content">
-                <div class="push"></div>
-            </div>
-            <div class="footer" th:replace="fragments :: footer"></div>
-        </div>
+        <div th:replace="fragments :: header"></div>
+        <div class="content" layout:fragment="content"></div>
+        <div th:replace="fragments :: footer"></div>
     </div>
 
 </body>

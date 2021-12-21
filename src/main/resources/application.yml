@@ -5,10 +5,13 @@ spring:
     username: proba_spring_email@op.pl
     password: abc123ABC
     properties:
+      mail:
+        debug: true
       smtp:
         auth: true
-        mail.ssl.enable: true
-
-logging:
-  level:
-    email.plemail: DEBUG
+        ssl:
+          enable: true
+#
+#logging:
+#  level:
+#    email.plemail: DEBUG
