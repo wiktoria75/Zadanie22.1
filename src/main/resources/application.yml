@@ -7,11 +7,7 @@ spring:
     properties:
       mail:
         debug: true
-      smtp:
-        auth: true
-        ssl:
-          enable: true
-#
-#logging:
-#  level:
-#    email.plemail: DEBUG
+        smtp:
+          auth: true
+          ssl:
+            enable: true
