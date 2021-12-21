@@ -1,0 +1,34 @@
+html, body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    align-items: baseline;
+    padding: 30px;
+    gap: 10px;
+    background-color: bisque;
+    color: cadetblue;
+}
+
+.content {
+    background-color: beige;
+    padding: 40px;
+    flex: 1;
+}
+
+.footer {
+    padding: 30px;
+    background-color: bisque;
+    color: maroon;
+}
+a {
+    color: black;
+}
